@@ -73,9 +73,9 @@
             <?php if (!empty($tabs)): ?><div class="tabs"><?php print $tabs; ?></div><?php endif; ?>
             <?php if (!empty($messages)): print $messages; endif; ?>
             <?php if (!empty($help)): print $help; endif; ?>
-            <div id="content-content" class="clear-block">
-              <?php print $content; ?>
-            </div> <!-- /content-content -->
+            <div id="content-lower" class="clear-block">
+              <?php print $content_lower; ?>
+            </div> <!-- /content-lower -->
             <?php print $feed_icons; ?>
           </div> <!-- /content -->
 
