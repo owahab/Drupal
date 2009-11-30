@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>Cortex Theme</title>
+    <!-- Compliancy with MS IE -->
+    <!--[if lt IE 8]><script src="scripts/IE8.js" type="text/javascript"></script><![endif]-->
+  </head>
+  <body>
+    <div style="background-color: yellow" />
+      <img src="logo-trans.png">
+    </
+div>
+  </body>
+</html>

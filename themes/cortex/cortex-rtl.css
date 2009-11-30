@@ -1,0 +1,15 @@
+/* $Id$ */
+
+#primary ul {
+  float: left;
+}
+
+#main .message-error ul li {
+  background-position: 100% -291px;
+}
+#main .message-status ul li {
+  background-position: 100% -603px;
+}
+#main .message-warning ul li {
+  background-position: 100% -436px;
+}

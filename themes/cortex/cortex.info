@@ -1,0 +1,37 @@
+; $Id$
+
+name = Cortex
+description = Cortex Theme aims towards theme developers. It was built with bi-directional sites in mind.
+version = VERSION
+core = 6.x
+engine = phptemplate
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = mission
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = search
+features[] = favicon
+features[] = primary_links
+features[] = secondary_links
+
+stylesheets[all][] = cortex.css
+stylesheets[all][] = style.css
+stylesheets[print][] = print.css
+
+regions[header] = Header
+
+regions[content_upper] = Upper Content
+regions[content] = Content
+regions[content_lower] = Lower Content
+
+regions[left] = Left sidebar
+regions[right] = Right sidebar
+
+regions[footer_upper] = Upper Footer
+regions[footer_left] = Left Footer
+regions[footer_middle] = Middle Footer
+regions[footer_right] = Right Footer
+regions[footer_lower] = Lower Footer

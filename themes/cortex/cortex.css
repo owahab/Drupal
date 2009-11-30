@@ -1,0 +1,432 @@
+/* $Id$ */
+
+/**
+ * Table of contents
+ *
+ * 1. HTML
+ * 2. Layout 
+ *
+ */
+
+
+/**********************************
+ * 1. HTML
+ **/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 80% Tahoma, Verdana, Helvetica, Arial, sand-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, Arial, "DejaVu Serif", "BitStream Vera Sans", sans-serif;
+}
+h1 {
+  font-size: 1.8em;
+}
+h2 {
+  font-size: 1.6em;
+  margin: 1em 0 0.3em 0;
+}
+h3 {
+  font-size: 1.4em;
+}
+
+a {
+  color: #007AD4;
+  text-decoration: none;
+}
+    a:hover {
+      color: #007AD4;
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #007AD4;
+    }
+    a:acive {
+      color: #0000AA;
+    }
+
+ul {
+  list-style-type: square;
+  margin-right: 1.2em;
+}
+ol {
+  margin-right: 2em;
+}
+
+table {
+}
+    table tbody td {
+        padding: 0.2em 0.1em;
+    }
+    table tr.odd {
+        background: #FFF;
+    }
+
+fieldset {
+  border: 1px solid #AAA;
+}
+
+/**********************************
+ * 2. Layout 
+ **/
+#header,
+#main,
+#footer {
+  /* Change this to the content size you want */
+  width: 85%;
+  margin: 0 auto;
+  clear: both;
+}
+
+#main,
+#main #content {
+  overflow: hidden;
+}
+#sidebar-left {
+  float: left;
+}
+#sidebar-right {
+  float: right;
+}
+/**** Two Sidebars ****/
+body.two-sidebars div.sidebar {
+  width: 20%;
+}
+body.two-sidebars #sidebar-right {
+  padding: 0 0 0 0.5%;
+}
+body.two-sidebars #sidebar-left {
+  padding: 0 0.5% 0 0;
+}
+body.two-sidebars #content-wrapper {
+  width: 57%;
+  float: left;
+  background: #FFF;
+}
+
+/*** One Sidebar ***/
+body.one-sidebar #content-wrapper {
+  width: 77.5%;
+  float: left;
+}
+body.one-sidebar .sidebar {
+  width: 20%;
+  padding: 0 1%;
+}
+body.one-sidebar #content-wrapper {
+  float: right;
+}
+
+#header {
+}
+    #header #logo-title {
+      float: right;
+    }
+    #header #name-and-slogan {
+      margin: 1em 0 0 0;
+    }
+    #header #search-box {
+      float: left;
+    }
+    #header #search-box #edit-submit {
+      float: left;
+      margin: 0 0.2em 0 0;
+    }
+#footer-wrapper {
+  overflow: hidden;
+  background: #DFDFDF;
+  border-top: 1px solid #FFF;
+}
+  #footer-wrapper #footer-upper,
+  #footer-wrapper #footer-lower,
+  #footer-wrapper #footer-message {
+    text-align: center;
+    clear: both;
+  }
+  #footer-wrapper #footer {
+    overflow: hidden;
+  }
+  #footer-wrapper .footer-column {
+    width: 31%;
+    margin: 0 0.5%;
+    padding: 0 0.5%;
+    float: left;
+  }
+  #footer-wrapper #footer-right,
+  #footer-wrapper #footer-middle{
+    border-left: 1px solid #EEE;
+  }
+  #footer-wrapper #footer-message {
+    padding: 0.4em;
+  }
+  #footer-wrapper .withbreadcrumb {
+    border-top: 2px groove #EFEFEF;
+  }
+#breadcrumb {
+  color: #999;
+  padding: 0.3em 0.6em;
+}
+  #breadcrumb a {
+    color: #999;
+  }
+  #breadcrumb .active-breadcrumb {
+    color: #444;
+  }
+  #footer-wrapper .withfootermessage {
+    border-bottom: 2px groove #EFEFEF;
+  }
+
+
+#footer {
+}
+    #footer ul.menu {
+      margin: 0 auto;
+      display: inline;
+    }
+    #footer ul.menu li {
+      list-style: none;
+      display: inline;
+      clear: none;
+    }
+
+
+/**********************************
+ * Layout Style 
+ **/
+#header-upper {
+  overflow: auto;
+  display: block;
+}
+#header-wrapper {
+  background: #E0E0E0;
+  border-bottom: 1px solid #999;
+}
+#header {
+  overflow: hidden;
+}
+  #header #logo-title {
+    float: left;
+    margin: 1em 1em 0 0;
+  }
+  #header #logo {
+    float: left;
+    margin: 0.5em;
+  }
+  #header #name-and-slogan {
+    display: inline;
+    clear: none;
+    float: left;
+    margin: 1em 0 0 0;
+  }
+  #header #site-name a {
+    color: #A90532;
+  }
+  #header #site-slogan {
+    color: #777;
+  }
+  #header #search-box {
+    font-size: 14px;
+    background: #000;
+    padding: .8em;
+    float: left;
+  }
+  #header #search-box label {
+    display: none;
+  }
+  #header #search-box .form-item {
+    margin: 0;
+    padding: 0;
+    float: right;
+  }
+  #header #search-box #edit-search-theme-form-1 {
+    width: 14em;
+    height: 13px;
+    line-height: 1.2em;
+    padding: 4px;
+    border: none;
+  }
+  #header #search-box .form-submit {
+    margin: 0 0 0 0.2em;
+    float: left;
+  }
+
+#site-slogan {
+    color: #FFFFFF;
+    margin: 0px 0px 10px 0px ;
+    text-align: center;
+}
+
+#mission {
+    font-size: 3em;
+}
+
+#navigation {
+  font: 80% Arial, Helvetica, "DejaVu Serif", "BitStream Vera Sans", sans-serif;
+  display: block;
+  margin: 0 auto;
+  clear: both;
+}
+#primary {
+  padding: 0;
+  text-align: left;
+}
+    #primary ul {
+      margin: 0;
+      padding: 0;
+      display: inline;
+      height: 22px;
+      line-height: 22px;
+      float: right;
+    }
+    #primary ul li {
+      padding: 0.6em 0.1em;
+      margin: 0 0.2em 0 0;
+      display: inline;
+      background: #D54E21 url('images/icons.png') scroll repeat-x 0 -1108px;
+    }
+    #primary ul li a {
+      color: #FFF;
+      font-size: 120%;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 0;
+      padding: 0 1em;
+    }
+    #primary ul li a:hover {
+      color: #000;
+    }
+    #primary ul li.home-link a {
+      padding: 0 2em 0 1em;
+      background: transparent url('images/icons.png') scroll no-repeat 100% -200px;
+    }
+    #primary ul li.home-link a:hover {
+      background: transparent url('images/icons.png') scroll no-repeat 100% -246px;
+    }
+
+#content {
+  padding: 0.5em;
+}
+#container-wrapper {
+  border-top: 1px solid #EFEFEF;
+  border-bottom: 1px solid #999;
+  background: #FFF;
+}
+#main {
+  background: #FFF;
+}
+    #main h1#page-title {
+      margin: 1em 0.5em 0 0.5em;
+    }
+
+/**********************************
+ * Errors & Help 
+ **/
+#main .messages {
+  padding: 0.5em;
+  margin: 0.5em 0;
+  border: 1px solid #666; 
+}
+    #main .messages ul li {
+      list-style: none;
+      padding: 0.4em 3em;
+    }
+    #main .message-error {
+      color: #880000;
+    }
+    #main .message-error ul li {
+      background: transparent url('images/icons.png') scroll no-repeat 0 -291px;
+    }
+    #main .message-status {
+      color: #008800;
+      background: #EEE;
+    }
+    #main .message-status ul li {
+      background: transparent url('images/icons.png') scroll no-repeat 0 -603px;
+    }
+    #main .message-warning {
+    }
+    #main .message-warning ul li {
+      background: transparent url('images/icons.png') scroll no-repeat 0 -436px;
+    }
+
+#main .help {
+    padding: 0.5em;
+    background: #90EE90;
+    border: 1px dashed #008000;
+    margin: 0.5em 0;
+}
+#main .more-help-link {
+}
+
+
+/* Forms */
+legend {
+  padding: 0 0.4em;
+}
+
+/* Nodes */
+.node {
+  margin: 1em 0.5em;
+}
+.node .content {
+  margin: 0.5em;
+}
+.node .meta {
+  background: #CCC;
+  padding: 0.6em 0;
+  display: block;
+  overflow: auto;
+}
+.submitted {
+  margin: 1em 0;
+  color: #D54E21;
+}
+.node .meta .terms {
+  background: transparent url('images/icons.png') 2px -93px no-repeat;
+  padding: 0.2em 0.5em 0.2em 1.5em;
+  margin: 0 0.2em;
+  float: right;
+}
+.node .meta .extra-links {
+  margin: 0 0.2em;
+  padding: 0.2em 0;
+  float: left;
+}
+.node .meta .extra-links ul li {
+  padding: 0 0.2em 0 1.5em;
+  background: transparent url('images/icons.png') -8px -983px no-repeat;
+}
+
+/**********************************
+ * Blocks 
+ **/
+.block {
+  margin: 0.6em 0;
+}
+.block h2 {
+  margin: 0.5em 0;
+  font-family: Palatino, Palatino Linotype, Georgia, Times, Times New Roman, serif;
+}
+.sidebar .block {
+  overflow: hidden;
+  border-bottom: 1px dotted #666;
+}
+.sidebar .block h2 {
+  color: #888;
+  margin: 0.1em 0;
+  padding: 0.2em 0;
+  overflow: hidden;
+}
+.sidebar .block .content {
+  padding: 0.5em;
+}
+
+
+/* Views */
+div.view div.views-admin-links {
+  width: 300px;
+}
