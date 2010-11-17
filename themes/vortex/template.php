@@ -65,3 +65,46 @@ function phptemplate_links($links, $attributes = array('class' => 'links')) {
 
   return $output;
 }
+
+function phptemplate_preprocess_page(&$vars) {
+  $columns = 1;
+  if (!empty($vars['alpha'])) {
+    $columns++;
+  }
+  if (!empty($vars['bravo'])) {
+    $columns++;
+    //= ($variables['layout'] == 'two') ? 'three' : 'two';
+  }
+  if (!empty($vars['charlie'])) {
+    // No need to count charlie
+    //= ($variables['layout'] == 'two') ? 'three' : 'two';
+  }
+  if (!empty($vars['delta'])) {
+    //$variables['layout'] = ($variables['layout'] == 'charlie') ? 'four' : ($variables['layout'] == 'charlie') ? 'three' : 'delta';
+    $columns++;
+  }
+
+  // Compile a list of classes that are going to be applied to the body element.
+  // This allows advanced theming based on context (home page, node of certain type, etc.).
+  $body_classes = array();
+  // Add a class that tells us whether we're on the front page or not.
+  $body_classes[] = $vars['is_front'] ? 'front' : 'not-front';
+  // Add a class that tells us whether the page is viewed by an authenticated user or not.
+  $body_classes[] = $vars['logged_in'] ? 'logged-in' : 'not-logged-in';
+  // Add arg(0) to make it possible to theme the page depending on the current page
+  // type (e.g. node, admin, user, etc.). To avoid illegal characters in the class,
+  // we're removing everything disallowed. We are not using 'a-z' as that might leave
+  // in certain international characters (e.g. German umlauts).
+  $body_classes[] = preg_replace('![^abcdefghijklmnopqrstuvwxyz0-9-_]+!s', '', 'page-'. form_clean_id(drupal_strtolower(arg(0))));
+  $body_classes[] = preg_replace('![^abcdefghijklmnopqrstuvwxyz0-9-_]+!s', '', 'pn-'. str_replace('/', '-', drupal_get_normal_path($_GET['q'])));
+  $body_classes[] = preg_replace('![^abcdefghijklmnopqrstuvwxyz0-9-_]+!s', '', 'pa-'. str_replace('/', '-', drupal_get_path_alias($_GET['q'])));
+  // If on an individual node page, add the node type.
+  if (isset($vars['node']) && $vars['node']->type) {
+    $body_classes[] = 'node-type-'. form_clean_id($vars['node']->type);
+  }
+
+  // Add information about the number of columns.
+  $body_classes[] = 'column-count-' . $columns;
+  // Implode with spaces.
+  $vars['body_classes'] = implode(' ', $body_classes);
+}

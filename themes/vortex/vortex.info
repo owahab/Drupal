@@ -1,16 +1,20 @@
 ; $Id$
-
 name = Vortex
-description = Vortex is a blank canvas for theme developers. It was built with bi-directional sites in mind.
-version = VERSION
+description = HawaaWorld's base theme, create your own copy and customize.
 core = 6.x
-engine = phptemplate
-stylesheets[all][] = vortex.css
-stylesheets[all][] = style.css
-stylesheets[print][] = print.css
+version = 1.0
 
-regions[left] = Left sidebar
-regions[right] = Right sidebar
-regions[content] = Content
+engine = phptemplate
+stylesheets[all][] = css/style.css
+stylesheets[print][] = css/print.css
+
+regions[alpha] = Column One
+regions[bravo] = Column Two
+regions[charlie] = Column Three
+regions[delta] = Column Four
 regions[header] = Header
 regions[footer] = Footer
+
+features[] = logo
+features[] = name
+features[] = favicon

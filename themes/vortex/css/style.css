@@ -1,0 +1,252 @@
+/* $Id$ */
+
+/* HTML Defaults */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 14px/24px Tahoma, Verdana, Helvetica, sand-serif;
+}
+iframe {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+table td {
+  padding: 0.2em;
+}
+
+
+
+/* Layout */
+#page-wrapper {
+  background: transparent url('../images/bg.jpg') repeat-x top left;
+}
+#page {
+  /* Change this to the content size you want */
+  width: 960px;
+  margin: 0 auto;
+  border: 1px solid #BBB;
+}
+#main {
+  overflow: hidden;
+}
+#column-alpha {
+  float: left;
+}
+#column-delta {
+  float: right;
+}
+/**** Four Columns ****/
+body.column-count-4 div.column {
+  width: 32.1%;
+  margin: 0;
+  float: left;
+}
+/* Special case for column #2 in a 4-column UI */
+body.column-count-4 #column-charlie {
+  width: 22.7%;
+  padding: 0 0 5em 0;
+}
+
+/**** Three Columns ****/
+body.column-count-3 div.column {
+  width: 20%;
+  margin: 0;
+  float: left;
+}
+body.column-count-3 #column-charlie {
+  width: 65%;
+  float: left;
+}
+/*** Two Columns ***/
+body.column-count-2 #column-charlie {
+  width: 76%;
+  float: right;
+  padding: 1em;
+}
+body.column-count-2 .column {
+  width: 20%;
+  margin: 0;
+}
+/*** One Column ***/
+body.column-count-1 #column-charlie {
+  width: 100%;
+}
+
+/* Layout Style */
+#header-wrapper {
+  background: #3D9FD1;
+  padding: 1em;
+  border-bottom: 1px solid #000088;
+}
+#header {
+  overflow: hidden;
+}
+#header #logo {
+  clear: none;
+  display: inline;
+}
+#header #name-and-slogan {
+  display: inline;
+  clear: none;
+}
+#header #site-name a {
+  color: #000;
+}
+#header #logo-title {
+}
+#header #header-region {
+  margin: 0 auto;
+}
+
+#navigation {
+  margin: 0.5em 0 0 0;
+  width: 100%;
+  display: block;
+}
+#primary {
+  clear: both;
+  width: 100%;
+}
+#primary ul {
+  clear: both;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0.1em 0;
+}
+#primary ul li {
+  padding: 0.45em 0;
+  margin: 0 1px;
+  width: 12.275%;
+  text-align: center;
+}
+#primary ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 auto;
+}
+#primary ul li a:hover {
+  color: #000;
+}
+
+#container-wrapper {
+  background: #FFF;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+#main {
+}
+#content {
+  padding: 0.3em;
+}
+
+#footer-wrapper {
+  border-top: 1px solid #000;
+}
+#footer-message {
+  font: 90% Tahoma, Arial, Verdana, Helvetica, sans-serif;
+  padding: 2em;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+body.pn-admin-build-block #column-charlie {
+  width: 70%;
+}
+body.pn-admin-build-block div.sidebar {
+  width: 10%;
+}
+
+
+/* Nodes */
+.node {
+  margin: 1em 0.5em;
+}
+.node .meta {
+  padding: 0.5em 1.2em;
+}
+.node .meta .terms {
+  padding: 0.2em 0.5em 0.2em 1.5em;
+}
+.node .meta .extra-links {
+  padding: 0.2em;
+}
+
+/* Blocks */
+.block {
+  margin: 0.6em 0;
+}
+.block h2 {
+  margin: 0.5em 0;
+}
+.sidebar .block {
+  margin: 0;
+  overflow: hidden;
+  background: #FFF;
+}
+.sidebar .block h2 {
+  padding: 0.5em 4em 0 0.2em;
+  overflow: hidden;
+  border-bottom: 1px solid #633044;
+  font-size: 120%;
+  line-height: 1.8em;
+}
+.sidebar .block .content {
+  padding: 0.5em;
+}
+
+/* Menus */
+ul.menu li.leaf,
+ul.menu li,
+.item-list ul li {
+  list-style-position: inside;
+  padding-right: 1.5em;
+  margin: 0;
+}
+
+
+/** Forms **/
+input.form-submit {
+  border: 1px solid #333;
+  background: #666;
+  padding: 0.3em 0.8em;
+  color: #FFFFFF;
+}
+
+
+/** Comments **/
+.comment {
+  padding: 10px;
+  border: 1px solid #fff;
+  margin: 10px;
+  background: #F5E4FA;
+}
+#tax .comment_comments,#tax .comment_new_comments {
+  display: none;
+}
+#comments #edit-preview {
+  display: none;
+}
+#comments .box {
+  border: 1.5px solid #000;
+  background-color: #ffffff;
+  padding: 50px;
+  margin: 10px;
+}
+#comments .box h2 {
+  text-align: center;
+  font-size: 1.1em;
+}
